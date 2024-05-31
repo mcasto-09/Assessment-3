@@ -1,7 +1,7 @@
-h1 {
+#text {
     text-align: center;
 }
 
-p {
-    text-align: center;
+#button {
+    text-align: end;
 }
