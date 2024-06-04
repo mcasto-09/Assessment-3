@@ -8,7 +8,7 @@ const port = '8000'
 
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended:false}))
-app.use(express.static)
+app.use(express.static('public'))
 app.use(session({
     secret: 'shh',
     saveUninitialized: true,
@@ -19,6 +19,11 @@ nunjucks.configure('views', {
     express: app,
 })
 
+app.get('/', (req, res) => {
+    res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
+  });
+  
 app.listen(port, () => {
     console.log(`App is listening on port http://localhost:${port}`)
 })
+
