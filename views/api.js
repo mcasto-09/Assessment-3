@@ -1,10 +1,3 @@
-import express from 'express'
-import session from 'express-session'
-import morgan from 'morgan'
-import nunjucks from 'nunjucks'
-import axios from 'axios'
-
-
 const fetch = require('node-fetch');
 
 const url = 'https://api.themoviedb.org/3/movie/movie_id?language=en-US';
@@ -20,11 +13,4 @@ fetch(url, options)
   .then(res => res.json())
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err));
-
-
-
-const button = document.querySelector('#button');
-button.addEventListener('click', () => {
-    console.log('click')
-})
 
