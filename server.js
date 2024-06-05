@@ -27,3 +27,6 @@ app.listen(port, () => {
     console.log(`App is listening on port http://localhost:${port}`)
 })
 
+app.get('/movies', (req, res) => {
+    res.json('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
+  });
