@@ -1,3 +1,4 @@
+import { movieRandomizer } from "../api";
 
 
 const button = document.querySelector('#button');
