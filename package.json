@@ -12,9 +12,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "-": "^0.0.1",
     "axios": "^1.7.2",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "g": "^2.0.1",
     "lodash": "^4.17.21",
     "morgan": "^1.10.0",
     "node-fetch": "^2.7.0",

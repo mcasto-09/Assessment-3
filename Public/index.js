@@ -1,10 +1,9 @@
-import { movieRandomizer } from "../api";
 
 
 const button = document.querySelector('#button');
 button.addEventListener('click',() => {
-    axios.get('/movies').then((result) => {
-        console.log(result)
+    axios.get('../server.js/movies').then((result) => {
+        
     }).catch((err) => {
         
     });

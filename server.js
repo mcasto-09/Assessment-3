@@ -20,7 +20,7 @@ nunjucks.configure('views', {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
+    res.render('index.html');
   });
   
 app.listen(port, () => {
@@ -28,5 +28,6 @@ app.listen(port, () => {
 })
 
 app.get('/movies', (req, res) => {
-    res.json('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
+    // res.json('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
+
   });
