@@ -18,6 +18,7 @@ nunjucks.configure('views', {
     autoescape:true,
     express: app,
 })
+app.use(express.static(path.join(__dirname, 'Public')))
 
 app.get('/', (req, res) => {
     res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/views/index.html');
@@ -28,7 +29,10 @@ app.listen(port, () => {
 })
 
 app.get('/pokemon', (req, res) => {
-     res.render('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/views/index.html');
+     res.render('/Public/index.js');
   });
+
+
+  
 
 // get function above into your front end like a gamer
