@@ -20,14 +20,15 @@ nunjucks.configure('views', {
 })
 
 app.get('/', (req, res) => {
-    res.render('index.html');
+    res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/views/index.html');
   });
   
 app.listen(port, () => {
     console.log(`App is listening on port http://localhost:${port}`)
 })
 
-app.get('/movies', (req, res) => {
-    // res.json('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.html');
-
+app.get('/pokemon', (req, res) => {
+     res.render('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/views/index.html');
   });
+
+// get function above into your front end like a gamer
