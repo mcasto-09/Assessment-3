@@ -1,19 +1,29 @@
+body {
+    background-color: rgb(212, 212, 212);
+    font-family: fantasy;
+}
+
 #text {
     text-align: center;
-    color: blue;
+    color: rgb(160, 20, 20);
+    word-break:inherit
+    
 }
 
-#button {
-    text-align: end;
-
+#wrapper {
+    display: flex;
+    justify-content: center;
 }
+
+
 
 #pokemonData {
-    margin-top: 20px;
+    margin-top: 10%;
+    display:flex;
+    justify-content:center;
+    font-size: 48px;
 }
 
-img {
-    max-width: 20px;
-    height: auto;
+p {
+    font-size: 20px;
 }
-

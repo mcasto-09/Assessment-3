@@ -18,10 +18,9 @@ nunjucks.configure('views', {
     autoescape:true,
     express: app,
 })
-app.use(express.static(path.join(__dirname, 'Public')))
 
 app.get('/', (req, res) => {
-    res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/views/index.html');
+    res.sendFile('C:/Users/Mary Castorani/Documents/Programming/Web Assessment 3/Public/index.js');
   });
   
 app.listen(port, () => {
@@ -29,7 +28,7 @@ app.listen(port, () => {
 })
 
 app.get('/pokemon', (req, res) => {
-     res.render('/Public/index.js');
+     res.render('Public/index.html');
   });
 
 

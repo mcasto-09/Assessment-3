@@ -1,46 +1,20 @@
-
 const url = 'https://pokeapi.co/api/v2/pokemon/{id or name}/'
 const options = {
     method: 'GET',
 };
 
-document.addEventListener('button',() => {
-    const button = document.querySelector('#button')
-    button.addEventListener('click', async () => {
-        const pokemonDataDiv = document.getElementById('pokemonData')
-        const randomId = Math.floor(Math.random()*1118) +1
-        try {
-            const response = await axios.get('https://pokeapi.co/api/v2/pokemon/${randomId}')
-            const randomPokemon = response.data
-            const name = document.createElement('h2')
-            name.textContent = `Pokemon: ${randomPokemon.name}`
-            const sprite = document.createElement('img')
-            sprite.src = randomPokemon.sprites.front_default;
-            sprite.alt - `${randomPokemon.name} sprite`
 
-            pokemonDataDiv.appendChild(name);
-            pokemonDataDiv.appendChild(id);
-            pokemonDataDiv.appendChild(sprite);
-        } catch (error) {
-            console.error('Error fetching Pokémon:', error);
-        }
+const button = document.querySelector('#button')
+button.addEventListener('click', () => {
+    let pokemonNum = Math.floor(Math.random() * 1025) + 1
+    let pokeURL = `https://pokeapi.co/api/v2/pokemon/${pokemonNum}`
+    axios.get(pokeURL).then((response) => {
+        document.querySelector(`#pokemonData`).innerText = response.data.name;
+    }).catch(error => {
+        console.error("Error fetching the Pokémon data:", error);
     });
-});
 
-
-// button.addEventListener('click', (fetchRandomPokemon) => {
-//     console.log('click')
-//     async function fetchRandomPokemon() {
-//         // const pokemonDataDiv = document.getElementById('pokemonData')
-//         const randomId = Math.floor(Math.random() * 1118) + 1
-//         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`)
-//         try {
-//             const randomPokemon = await P.getPokemonSpeciesByName[randomId]
-//         } catch (error) {
-//             throw error
-//         }
-//     } return fetchRandomPokemon
-// })
+})
 
 
 
